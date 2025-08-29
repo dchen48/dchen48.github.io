@@ -195,5 +195,34 @@ function closeNav() {
     }
 }
 </script>
+
+<!-- Visitor Counter (CountAPI.xyz) -->
+<div id="visitor-counter" style="margin: 24px 0; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95em;">
+  <span style="opacity:0.75;">Total visits:</span> <strong id="vc_total">—</strong>
+</div>
+<script>
+(function(){
+  try {
+    var ns = 'dchen48.github.io';             // namespace for your site
+    var key = 'total_visits';                 // counter key
+    var endpoint = 'https://api.countapi.xyz/hit/' + encodeURIComponent(ns) + '/' + encodeURIComponent(key);
+    fetch(endpoint, {cache: 'no-store'})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        var el = document.getElementById('vc_total');
+        if (el && typeof d.value !== 'undefined') {
+          try {
+            el.textContent = Number(d.value).toLocaleString();
+          } catch(e) {
+            el.textContent = d.value;
+          }
+        }
+      })
+      .catch(function(){ var el = document.getElementById('vc_total'); if (el) el.textContent = 'n/a'; });
+  } catch(e) {}
+})();
+</script>
+<!-- End Visitor Counter -->
+
 </body>
 </html>
