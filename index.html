@@ -197,57 +197,21 @@ function closeNav() {
 </script>
 
 
-<!-- Visitor Counter (multi-provider with fallbacks) -->
-<div id="visitor-counter" style="margin: 24px 0; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95em;">
-  <span style="opacity:0.75;">Total visits:</span> <strong id="vc_total">—</strong>
+
+<!-- Visitor Counter (SVG badge, no JS) -->
+<div id="visitor-counter" style="margin: 24px 0; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95em; display:flex; align-items:center; gap:8px;">
+  <span style="opacity:0.75;">Total visits:</span>
+  <img
+    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdchen48.github.io%2F&count_bg=%23000000&title_bg=%23000000&title=visits&edge_flat=false"
+    alt="Total visits counter badge"
+    style="height:22px; vertical-align:middle;"
+    referrerpolicy="no-referrer"
+    decoding="async"
+    loading="lazy"
+  />
 </div>
-<script>
-(function(){
-  var el = document.getElementById('vc_total');
-  function setVal(v){ if(el) el.textContent = v; }
-  function format(n){ try{return Number(n).toLocaleString();}catch(e){return n+'';} }
-
-  var ns = 'dchen48.github.io';
-  var key = 'total_visits';
-
-  // Try CountAPI main domain with "update" (creates if missing)
-  function tryCountApi(base){
-    var url = base + '/update/' + encodeURIComponent(ns) + '/' + encodeURIComponent(key) + '?amount=1';
-    return fetch(url, {cache:'no-store'})
-      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
-      .then(function(d){ if(typeof d.value === 'number') { setVal(format(d.value)); return true; } throw new Error('no value'); });
-  }
-
-  // Fallback: seeyoufarm hits (SVG)
-  function tryHits(){
-    var encUrl = encodeURIComponent('https://' + ns + '/');
-    var svg = 'https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=' + encUrl + '&count_bg=%23000000&title_bg=%23000000&title=visits&edge_flat=false';
-    // increment by creating an Image (doesn't need CORS)
-    var img = new Image(); img.src = svg; // this increments
-    // now fetch the SVG and parse the number
-    return fetch(svg, {cache:'no-store'})
-      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.text(); })
-      .then(function(t){
-        // crude parse: last number-like token in the SVG
-        var m = t.match(/>(\d{1,12})<\/text>\s*<\/svg>\s*$/i);
-        if(m && m[1]) { setVal(format(parseInt(m[1],10))); return true; }
-        // fallback parse: any number in the SVG
-        var m2 = t.match(/>(\d{1,12})</);
-        if(m2 && m2[1]) { setVal(format(parseInt(m2[1],10))); return true; }
-        throw new Error('no number in svg');
-      });
-  }
-
-  (function run(){
-    // try countapi without subdomain first (in case api.* is down)
-    tryCountApi('https://countapi.xyz')
-      .catch(function(){ return tryCountApi('https://api.countapi.xyz'); })
-      .catch(function(){ return tryHits(); })
-      .catch(function(){ setVal('n/a'); });
-  })();
-})();
-</script>
 <!-- End Visitor Counter -->
+
 
 
 </body>
