@@ -1,208 +1,181 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="icon" href="./images/icon.png">
-<link rel="stylesheet" href="main.css" type="text/css" />
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="nomenu.css" type="text/css" />
-<!--- <title></title> --->
-<title>Dingyang Chen</title>
-<!-- MathJax -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
-<!-- End MathJax -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dingyang Chen</title>
+    <meta name="description" content="Personal website of Dingyang Chen, Applied Scientist at Amazon.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/icon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 </head>
 <body>
-<div id="layout-content"> <!-- nomenu  -->
-<div id="text-img-container"><div id="img-container">
-<img src="photos/dingyang.jpg" alt="alt text" width="100px" height="100px" /></div>
-<div id="text-container"><h2>Dingyang Chen</h2>
-<p>
 
-<p>
-  <a href="mailto:dingyangchen118@gmail.com" target="_blank">Email</a> | 
-  <a href="CV.pdf" target="_blank">CV</a> | 
-  <a href="https://scholar.google.com/citations?user=vSdOGREAAAAJ&hl=en" target="_blank">Google Scholar</a> | 
-  <a href="https://github.com/dchen48" target="_blank">GitHub</a> | 
-  <a href="https://www.linkedin.com/in/dingyang-chen-97512712a/" target="_blank">LinkedIn</a>
-</p>
+    <main class="container">
+        
+        <header class="profile-header">
+            <div class="profile-img">
+                <img src="photos/dingyang.jpg" alt="Dingyang Chen">
+            </div>
+            <div class="profile-info">
+                <h1>Dingyang Chen</h1>
+                <p class="bio-text">
+                    I am an Applied Scientist at <strong>Amazon</strong>. I received my Ph.D. in Computer Science at the University of South Carolina, advised by Prof. <a href="https://qizhg.github.io/" target="_blank">Qi Zhang</a>. I also hold a Master of Engineering from UC Berkeley and a B.S. from UIUC.
+                </p>
+                <p class="bio-text">
+                    My research focuses on leveraging structural properties, such as Euclidean equivariance, in reinforcement learning to improve efficiency. Recently, I have focused on adapting large language models to sequential decision-making tasks.
+                </p>
+                
+                <div class="social-links">
+                    <a href="mailto:dingyangchen118@gmail.com">Email</a>
+                    <a href="CV.pdf" target="_blank">CV</a>
+                    <a href="https://scholar.google.com/citations?user=vSdOGREAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    <a href="https://github.com/dchen48" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/dingyang-chen-97512712a/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </header>
 
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Amazon</h3>
+                    <span class="date">Jan 2025 - Present</span>
+                </div>
+                <div class="exp-role">Applied Scientist, Seattle, WA</div>
+                <ul>
+                    <li>Fine-tuned LLMs to detect and assess defects in Amazon’s customer service chatbot responses.</li>
+                </ul>
+            </div>
 
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Amazon</h3>
+                    <span class="date">May 2024 - Aug 2024</span>
+                </div>
+                <div class="exp-role">Applied Scientist Intern, Bellevue, WA</div>
+                <ul>
+                    <li>Developed multi-armed bandit models for cost-of-goods prediction.</li>
+                </ul>
+            </div>
 
-</p>
-</div></div>
-<p>I am an Applied Scientist at Amazon. I received my Ph.D. in Computer Science at the University of South Carolina, where I was advised by Prof. Qi Zhang. I also hold a Master of Engineering in Electrical Engineering and Computer Sciences from the University of California, Berkeley, and a Bachelor of Science in Computer Science from the University of Illinois at Urbana-Champaign.
-<br><br>
-My research focuses on leveraging structural properties, such as Euclidean equivariance, present in certain reinforcement learning problems to improve sample and computational efficiency. More recently, I have become interested in adapting large language models to sequential decision-making tasks.
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Siemens</h3>
+                    <span class="date">May 2022 - Aug 2022</span>
+                </div>
+                <div class="exp-role">Research Intern, Remote</div>
+                <ul>
+                    <li>Applied reinforcement learning algorithms to optimize power system reconfiguration.</li>
+                </ul>
+            </div>
+        </section>
 
-</a>
-</p>
+        <section id="publications">
+            <h2>Publications</h2>
+            <ul class="pub-list">
+                <li>
+                    <a href="https://openreview.net/forum?id=Tke3BVwUz6" target="_blank" class="pub-title">Correlated Policy Optimization in Multi-Agent Subteams</a>
+                    <div class="pub-authors"><strong>Dingyang Chen</strong>, Jianing Ye, Zhenyu Zhang, Xiaolong Kuang, Xinyang Shen, Ozalp Ozer, Chongjie Zhang, Qi Zhang</div>
+                    <div class="pub-venue">International Conference on Learning Representations (ICLR), 2026</div>
+                </li>
 
-<h1>Professional Experience</h1>
+                <li>
+                    <a href="https://arxiv.org/pdf/2410.12983" target="_blank" class="pub-title">Reinforcement Learning with Euclidean Data Augmentation for State-Based Continuous Control</a>
+                    <div class="pub-authors">Jinzhu Luo, <strong>Dingyang Chen</strong>, Qi Zhang</div>
+                    <div class="pub-venue">Neural Information Processing Systems (NeurIPS), 2024</div>
+                </li>
 
-<p><b>Amazon, Seattle, WA — Jan 2025 - Present | Applied Scientist</b></p>
-<ul>
-  <li>Fine-tuned LLMs to detect and assess defects in Amazon’s customer service chatbot responses.</li>
-</ul>
+                <li>
+                    <a href="https://openreview.net/pdf?id=tLHd9gg57A" target="_blank" class="pub-title">Convergence Rates of Bayesian Network Policy Gradient for Cooperative Multi-Agent Reinforcement Learning</a>
+                    <div class="pub-authors"><strong>Dingyang Chen</strong>, Zhenyu Zhang, Xiaolong Kuang, Xinyang Shen, Ozalp Ozer, Qi Zhang</div>
+                    <div class="pub-venue">Workshop on Bayesian Decision-making and Uncertainty at NeurIPS, 2024</div>
+                </li>
 
-<p><b>Amazon, Bellevue, WA — May 2024 - Aug 2024 | Applied Scientist Intern</b></p>
-<ul>
-  <li>Developed multi-armed bandit models for cost-of-goods prediction.</li>
-</ul>
+                <li>
+                    <a href="https://arxiv.org/abs/2406.12125" target="_blank" class="pub-title">Efficient Sequential Decision Making with Large Language Models</a>
+                    <div class="pub-authors"><strong>Dingyang Chen</strong>, Qi Zhang, Yinglun Zhu</div>
+                    <div class="pub-venue">Empirical Methods in Natural Language Processing (EMNLP), 2024</div>
+                </li>
 
-<p><b>Siemens, Remote — May 2022 - Aug 2022 | Research Intern</b></p>
-<ul>
-  <li>Applied reinforcement learning algorithms to optimize power system reconfiguration.</li>
-</ul>
+                <li>
+                    <a href="https://openreview.net/pdf/694e33b8df6d1b84e2a807b48756faa1dad6637d.pdf" target="_blank" class="pub-title">E(3)-Equivariant Actor-Critic Methods for Cooperative Multi-Agent Reinforcement Learning</a>
+                    <div class="pub-authors"><strong>Dingyang Chen</strong>, Qi Zhang</div>
+                    <div class="pub-venue">International Conference on Machine Learning (ICML), 2024</div>
+                </li>
 
+                <li>
+                    <a href="https://proceedings.mlr.press/v202/chen23an/chen23an.pdf" target="_blank" class="pub-title">Context-Aware Bayesian Network Actor-Critic Methods for Cooperative Multi-Agent Reinforcement Learning</a>
+                    <div class="pub-authors"><strong>Dingyang Chen</strong>, Qi Zhang</div>
+                    <div class="pub-venue">International Conference on Machine Learning (ICML), 2023</div>
+                </li>
 
+                <li>
+                    <a href="https://openreview.net/pdf?id=xy_2w3J3kH" target="_blank" class="pub-title">Communication-Efficient Actor-Critic Methods for Homogeneous Markov Games</a>
+                    <div class="pub-authors"><strong>Dingyang Chen</strong>, Yile Li, Qi Zhang</div>
+                    <div class="pub-venue">International Conference on Learning Representations (ICLR), 2022</div>
+                </li>
 
+                <li>
+                    <a href="https://openreview.net/pdf?id=pe2ZGTUxVvJ" target="_blank" class="pub-title">Convergence and Price of Anarchy Guarantees of the Softmax Policy Gradient in Markov Potential Games</a>
+                    <div class="pub-authors"><strong>Dingyang Chen</strong>, Qi Zhang, Thinh T. Doan</div>
+                    <div class="pub-venue">Decision Awareness in Reinforcement Learning Workshop at ICML, 2022</div>
+                </li>
 
+                <li>
+                    <a href="https://openreview.net/pdf?id=VR0mCjFWGZw" target="_blank" class="pub-title">A Meta-Gradient Approach to Learning Cooperative Multi-Agent Communication Topology</a>
+                    <div class="pub-authors">Qi Zhang, <strong>Dingyang Chen</strong></div>
+                    <div class="pub-venue">Workshop on Meta-Learning at NeurIPS, 2021</div>
+                </li>
+            </ul>
+        </section>
 
-<!--
-<h1>Preprints</h1>
-<ul>
-  <li><p><a href="https://arxiv.org/pdf/2406.12125" target=&ldquo;blank&rdquo;><b>Efficient Sequential Decision Making with Large Language Models</b></a> <br />
-  <b>Dingyang Chen</b>, Qi Zhang, and Yinglun Zhu <br />
-  In submission, 2024</p>
-  </li>
-</ul>
--->
+        <section id="service">
+            <h2>Professional Service</h2>
+            
+            <div class="service-group">
+                <h3>Conference Reviewer / Program Committee</h3>
+                <ul>
+                    <li>ICML 2024, 2025, 2026</li>
+                    <li>AISTATS 2026</li>
+                    <li>AAAI 2025</li>
+                    <li>ICLR 2024</li>
+                    <li>NeurIPS 2023</li>
+                    <li>NeurIPS 2022 Deep RL Workshop</li>
+                </ul>
+            </div>
 
+            <div class="service-group">
+                <h3>Journal Reviewer</h3>
+                <ul>
+                    <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
+                </ul>
+            </div>
+        </section>
 
-<h1>Publications </h1>
+        <section id="teaching">
+            <h2>Teaching Experience</h2>
 
-<ul>
-<li><p><a href="https://openreview.net/forum?id=Tke3BVwUz6" target=&ldquo;blank&rdquo;><b>Correlated Policy Optimization in Multi-Agent Subteams
-</b></a> <br />
-<b>Dingyang Chen</b>, Jianing Ye, Zhenyu Zhang, Xiaolong Kuang, Xinyang Shen, Ozalp Ozer, Chongjie Zhang, Qi Zhang <br />
-International Conference on Learning Representations (ICLR) 2026</p>
-</li>
-</ul>
+            <div class="service-group">
+                <h3>Graduate Teaching Assistant</h3>
+                <ul>
+                    <li>Visualization Tools, University of South Carolina (Fall 2024)</li>
+                    <li>Algorithmic Design I, University of South Carolina (Fall 2023)</li>
+                </ul>
+            </div>
+        </section>
 
-<ul>
-<li><p><a href="https://arxiv.org/pdf/2410.12983" target=&ldquo;blank&rdquo;><b>Reinforcement Learning with Euclidean Data Augmentation for State-Based Continuous Control</b></a> <br />
-Jinzhu Luo, <b>Dingyang Chen</b>, Qi Zhang<br />
-Neural Information Processing Systems (NeurIPS) 2024</p>
-</li>
-</ul>
+        <footer>
+            <p>&copy; 2026 Dingyang Chen. Last updated: January 2026.</p>
+        </footer>
 
-<ul>
-<li><p><a href="https://openreview.net/pdf?id=tLHd9gg57A" target=&ldquo;blank&rdquo;><b>Convergence Rates of Bayesian Network Policy Gradient for Cooperative Multi-Agent Reinforcement Learning</b></a> <br />
-<b>Dingyang Chen</b>, Zhenyu Zhang, Xiaolong Kuang, Xinyang Shen, Ozalp Ozer, Qi Zhang<br />
-Workshop on Bayesian Decision-making and Uncertainty at NeurIPS 2024</p>
-</li>
-</ul>
-
-
-<ul>
-<li><p><a href="https://arxiv.org/abs/2406.12125" target=&ldquo;blank&rdquo;><b>Efficient Sequential Decision Making with Large Language Models</b></a> <br />
-<b>Dingyang Chen</b>, Qi Zhang, and Yinglun Zhu <br />
-Empirical Methods in Natural Language Processing (EMNLP) 2024</p>
-</li>
-</ul>
-
-<ul>
-<li><p><a href="https://openreview.net/pdf/694e33b8df6d1b84e2a807b48756faa1dad6637d.pdf" target=&ldquo;blank&rdquo;><b>E(3)-Equivariant Actor-Critic Methods for Cooperative Multi-Agent Reinforcement Learning</b></a> <br />
-<b>Dingyang Chen</b>, Qi Zhang <br />
-International Conference on Machine Learning (ICML) 2024</p>
-</li>
-</ul>
-
-<ul>
-<li><p><a href="https://proceedings.mlr.press/v202/chen23an/chen23an.pdf" target=&ldquo;blank&rdquo;><b>Context-Aware Bayesian Network Actor-Critic Methods for Cooperative Multi-Agent Reinforcement Learning</b></a> <br />
-<b>Dingyang Chen</b>, Qi Zhang <br />
-International Conference on Machine Learning (ICML) 2023</p>
-</li>
-</ul>
-
-<ul>
-<li><p><a href="https://openreview.net/pdf?id=xy_2w3J3kH" target=&ldquo;blank&rdquo;><b>Communication-Efficient Actor-Critic Methods for Homogeneous Markov Games
-</b></a> <br />
-<b>Dingyang Chen</b>, Yile Li, Qi Zhang <br />
-International Conference on Learning Representations (ICLR) 2022</p>
-</li>
-</ul>
-
-<ul>
-<li><p><a href="https://openreview.net/pdf?id=pe2ZGTUxVvJ" target=&ldquo;blank&rdquo;><b>Convergence and Price of Anarchy Guarantees of the Softmax Policy Gradient in Markov Potential Games
-</b></a> <br />
-<b>Dingyang Chen</b>, Qi Zhang, Thinh T. Doan <br />
-Decision Awareness in Reinforcement Learning Workshop at ICML 2022</p>
-</li>
-</ul>
-
-<ul>
-<li><p><a href="https://openreview.net/pdf?id=VR0mCjFWGZw" target=&ldquo;blank&rdquo;><b>A Meta-Gradient Approach to Learning Cooperative Multi-Agent Communication Topology
-</b></a> <br />
-Qi Zhang, <b>Dingyang Chen</b> <br />
-Workshop on Meta-Learning at NeurIPS 2021</p>
-</li>
-</ul>
-
-<h1>Professional Service</h1>
-
-<h3>Conference Reviewer / Program Committee</h3>
-<ul>
-  <li>ICML 2024, 2025, 2026</li>
-  <li>AISTATS 2026</li>
-  <li>AAAI 2025</li>
-  <li>ICLR 2024</li>
-  <li>NeurIPS 2023</li>
-  <li>NeurIPS 2022 Deep RL Workshop</li>
-</ul>
-
-<h3>Journal Reviewer</h3>
-<ul>
-  <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
-</ul>
-
-<h3>Teaching Experience</h3>
-<ul>
-  <li>Graduate Teaching Assistant – Visualization Tools, University of South Carolina (Fall 2024)</li>
-  <li>Graduate Teaching Assistant – Algorithmic Design I, University of South Carolina (Fall 2023)</li>
-</ul>
-
-
-
-</div> <!-- <div id="layout-content"> -->
-<div id="footer-container">
-<div id="footer">
-<div id="footer-text">
-</div> <!-- <div id="footer-text"> -->
-</div> <!-- <div id="footer"> -->
-</div> <!-- <div id="footer-container"> -->
-<div> <!-- nomenulastbit to counteract  <div id="layout">  -->
-</div> <!--- <div id="layout"> --->
-</div> <!--- <div id="main-container"> --->
-<script>
-function openNav() {
-    if (window.innerWidth <= 1200) {
-        document.getElementById("layout-menu").style.width = "280px";
-        document.getElementById("layout-content-container").style.marginLeft = "280.8px";
-        document.getElementById("layout-content-container").style.position = "fixed";
-    }
-}
-function closeNav() {
-    if (window.innerWidth <= 1200) {
-        document.getElementById("layout-menu").style.width = "0";
-        document.getElementById("layout-content-container").style.position = "static";
-        document.getElementById("layout-content-container").style.marginLeft = "0px";
-        setInterval(
-            function(){ location.reload() },
-            500
-        );
-    }
-}
-</script>
+    </main>
 </body>
 </html>

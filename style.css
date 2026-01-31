@@ -1,0 +1,231 @@
+/* Base Reset & Typography */
+:root {
+    --text-color: #334155;
+    --heading-color: #0f172a;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --bg-color: #ffffff;
+    --secondary-text: #64748b;
+    --border-color: #e2e8f0;
+    
+    /* Layout Width */
+    --max-width: 1100px; 
+}
+
+html {
+    /* Base font size increased to 18px */
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout Container */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+h1 { 
+    font-size: 2.25rem; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: -0.025em; 
+    margin-top: 0; 
+}
+
+h2 { 
+    font-size: 1.5rem; 
+    margin-top: 3rem; 
+    margin-bottom: 1.5rem; 
+    border-bottom: 2px solid var(--border-color); 
+    padding-bottom: 0.5rem; 
+}
+
+h3 { 
+    font-size: 1.125rem; 
+    margin-bottom: 0.25rem; 
+    margin-top: 0;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 3rem 0;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start; 
+}
+
+.profile-img {
+    /* Pushes image down to align with the top of the text letters */
+    margin-top: 15px; 
+}
+
+.profile-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    display: block;
+}
+
+.bio-text {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    margin-top: 0;
+}
+
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.social-links a {
+    color: var(--secondary-text);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Experience Section */
+.experience-item {
+    margin-bottom: 2rem;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    font-feature-settings: "tnum";
+    white-space: nowrap;
+}
+
+.exp-role {
+    font-style: italic;
+    color: var(--secondary-text);
+    margin-bottom: 0.5rem;
+}
+
+/* Publications Section */
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-list li {
+    margin-bottom: 1.5rem;
+}
+
+.pub-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.pub-authors {
+    color: var(--text-color);
+}
+
+.pub-venue {
+    color: var(--secondary-text);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-top: 0.15rem;
+}
+
+/* Service & Teaching */
+.service-group {
+    margin-bottom: 2rem;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 0.875rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .profile-img {
+        margin-top: 0; /* Remove offset on mobile */
+    }
+
+    .profile-img img {
+        width: 160px;
+        height: 160px;
+    }
+
+    h1 { font-size: 2rem; }
+    
+    .container {
+        padding: 2rem 1.5rem;
+    }
+}
